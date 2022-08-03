@@ -14,4 +14,4 @@ RUN gem install bundler:2.3.6 && \
 
 EXPOSE 9394
 
-CMD ["/usr/local/bundle/bin/prometheus_exporter"]
+CMD ["/usr/local/bundle/bin/prometheus_exporter", "-b", "0.0.0.0"]
