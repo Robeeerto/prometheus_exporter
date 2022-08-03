@@ -12,4 +12,6 @@ RUN gem install bundler:2.3.6 && \
     find /usr/local/bundle -type f -name '*.o' -delete && \
     rm -rf /usr/local/bundle/cache/*.gem
 
+EXPOSE 9394
+
 CMD ["/usr/local/bundle/bin/prometheus_exporter"]
