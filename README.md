@@ -20,15 +20,15 @@ Application side:
 
 On the application side, customize exporter client setting is required, because prometheus_exporter client is connect to localhost by default.
 ``` ruby
-    require 'prometheus_exporter/middleware'
-    require 'prometheus_exporter/client'
+require 'prometheus_exporter/middleware'
+require 'prometheus_exporter/client'
 
-    # Change default client instance.
-    # ENV['CONTAINER_HOST'] is a placeholder.
-    prometheus_client = PrometheusExporter::Client.new(host: ENV['CONTAINER_HOST'])
-    PrometheusExporter::Client.default = prometheus_client
+# Change default client instance.
+# ENV['CONTAINER_HOST'] is a placeholder.
+prometheus_client = PrometheusExporter::Client.new(host: ENV['CONTAINER_HOST'])
+PrometheusExporter::Client.default = prometheus_client
 
-    Rails.application.middleware.unshift PrometheusExporter::Middleware
+Rails.application.middleware.unshift PrometheusExporter::Middleware
 ```
 
 ## Contribution
