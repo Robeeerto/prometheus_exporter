@@ -42,7 +42,7 @@ Rails.application.middleware.unshift PrometheusExporter::Middleware
 
 ## Licence
 
-[MIT](https://github.com/tri-star/docker-prometheus-exporter/blob/master/LICENSE)
+[MIT](https://github.com/Robeeerto/prometheus_exporter/blob/main/LICENSE)
 
 ## Author
 
